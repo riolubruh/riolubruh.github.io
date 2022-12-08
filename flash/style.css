@@ -1,0 +1,26 @@
+body {
+  background-color: black !important;
+}
+
+.center {
+  //margin: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+  color: white !important;
+}
+
+/*button {
+  width: 80px;
+  height: 25px;
+  min-height: 25px;
+  margin-left: 90%;
+  color: black;
+}*/
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color:lightblue !important;
+}

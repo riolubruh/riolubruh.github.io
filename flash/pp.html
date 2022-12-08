@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>CheerpX PPAPI Host</title>
+    <style>
+      .failure {
+        padding: 0px 20px;
+        background: rgba(255,255,255,0.8);
+        line-height: 40px;
+        outline: 1px solid black;
+        position: absolute;
+        font-size: 24px;
+        margin: 0;
+      }
+      .audiorequired {
+        position: absolute;
+        bottom: 0px;
+        left: 2px;
+        color: white;
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .popupmenu {
+        background: lightgray;
+        position: absolute;
+        white-space: nowrap;
+        margin: 0;
+        padding: 2px;
+        cursor: pointer;
+      }
+      .popupmenu > .cxDisabled {
+        color: white;
+        cursor: not-allowed;
+      }
+      .popupmenu > div {
+        padding: 2px;
+      }
+      .popupmenu > div:hover {
+        background: darkgray;
+      }
+
+      .actionPrompt {
+        background: gray;
+        text-align: center;
+        font-size: 5vmin;
+        opacity: 90%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script src="cx.js"></script>
+    <script src="ppIframe.js"></script>
+  </head>
+  <body style="height:100%;margin:0;overflow:hidden;">
+    <p id="failuremessage" style="display:none;" class="failure"></p>
+    <div id="audioenabler" style="display:none;" class="audiorequired">&#x1F507;&#xFE0E;</div>
+    <div id="ppfp" style="width:100%;height:100%"></div>
+  </body>
+</html>
