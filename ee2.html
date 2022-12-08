@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html style="min-height: 100%;" onclick="load()">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="height=device-height">
+    <title>Easter Egg 2!</title>
+    <link rel="shortcut icon" type="image/jpg" href="/bingus.png"/>
+    <link rel="preload" as="audio" href="/ee2.mp3">
+    <link rel="preload" as="image" href="/Lelemaoshe-676.gif">
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="min-height: 100%;" onclick="load()">
+    <div class="center"><center><p style="font-size:50px">Click anywhere to load!</p></center></div>
+  </body>
+  <script>
+    var runonce = 0;
+    function load(){
+      if(runonce == 0){
+        console.log("Init load");
+        runonce = -32767;
+        document.body.innerHTML = "<audio autoplay loop src='ee2.mp3'></audio><p>BINGUS MY BELOVED IS NOW SAFE!!<br>THANKS TO YOUR EFFORT!</p><img src='Lelemaoshe-676.gif' width='100%' height='100%' style='width:100vw;height:100vh;top:0px;left:0px;right:0px;bottom:0px;background-color:black;border:none;'><p>Easter Egg 2/2 Found!</p>";
+      }
+    }
+  </script>
+  <noscript><br>Enable JavaScript!</noscript>

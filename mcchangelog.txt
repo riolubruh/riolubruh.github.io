@@ -1,0 +1,15 @@
+Minecraft 1.5.2 Portable 1.5.2 Extreme Conditions Edition Changelog
+
+11/21/2021
+Made it so that there is only one AppData folder instead of two
+-Used symlinking to switch between the vanilla and modded minecraft jars instead of using a different AppData folder
+
+Compressed file size was reduced from 210MB to 166MB (nice!)
+-Uncompressed file size was also reduced by a lot
+-The file will now take less time to extract!
+
+Definitely not going to make a Linux version cause there is no reason to
+
+
+09/21/2021
+Original version created

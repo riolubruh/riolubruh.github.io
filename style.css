@@ -1,0 +1,89 @@
+/*:body:before {
+  content: url(bg copy.jpg)
+    // partial fallback
+  background-image: url(bg copy.jpg);
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}*/
+
+body {
+  background-color: black;
+  background-image: url("bg serious.jpg");
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  color: white
+}
+
+h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: white
+}
+
+
+h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white
+}
+
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  color:lightblue;
+}
+
+.links1 {
+  text-align: center;
+  font-size: 30px;
+  color:lightblue;
+}
+
+.links2 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.mirrors {
+  font-size: 10px;
+}
+
+.back {
+  font-size: 15px;
+  text-align: lol;
+}
+
+/*.errorpage {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: white
+}
+*/
+
+.geo {
+  text-align: center;
+  color:lightblue;
+}
+
+.description {
+  font-size: 11px;
+  color: white
+}
+
+.center {
+  //margin: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+}

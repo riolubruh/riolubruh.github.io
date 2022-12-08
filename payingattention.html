@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body onkeydown="k(event)" style="background-color:black">
+    <p id="asd" style="color:white; font-size: 20px;">Just to make sure you were paying attention, <b>type the <i>third word</i> of the <i>third line</i> of the credits page.</b> Click first before typing.</b></p>
+  <script type="text/javascript">
+    var s = 0;
+    var z = 0;
+      function k(event){
+  z = event.charCode || event.keyCode;
+    if(z == 70 && s == 0){
+      s = 1;
+      return
+    }
+    if(s == 1 && z == 79){
+      s = 2;
+      return
+    }
+    if(s == 2 && z == 82){
+      s = 3;
+      return
+    }
+    if(s == 3 && z == 75){
+      s = 4;
+      return
+    }
+    if(s == 4 && z == 69){
+      s = 5;
+      return
+    }
+    if(s == 5 && z == 68){
+      s = -1;
+      console.log("Correct");
+      document.body.innerHTML += "<p style='color: white; font-size: 26px;'><br>Good, so you <i>were</i> paying attention!<br>In that case, I think you have earned <a target='_blank' href=/ee2.html>a reward</a>";
+      return
+    }
+    else{
+     if(s > 0){
+     s = 0;
+     z = 0;
+          }
+        }
+  }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="height=device-height">
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<iframe style="height: 100vh; padding:0; padding-top:0; margin: none;" id="myiframe" width="100%" src="https://tidy-living-complaint.herokuapp.com/lesson/google.com"</iframe>
+<script>
+  const iframe = document.getElementById('myiframe');
+const iframeWin = iframe.contentWindow || iframe;
+const iframeDoc = iframe.contentDocument || iframeWin.document;
+
+  var script = iframeDoc.createElement("script");
+  script.append(`
+    document.body.addEventListener("click", function() {
+     alert("testing");
+  });
+`);
+  iframeDoc.documentElement.appendChild(script);
+</script>
