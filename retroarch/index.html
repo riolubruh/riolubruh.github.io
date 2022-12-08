@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+     <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>RetroArch</title>
+    <style>
+      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      textarea.emscripten { font-family: monospace; width: 80%; }
+      div.emscripten, h1 { text-align: center; }
+      div.emscripten_border { border: 1px solid black; }
+      #fakerom { font-size: 20pt; margin: 5pt;}
+      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+      canvas.emscripten { border: 0px none; }
+    </style>
+  </head>
+  <body>
+    <h1>A taste of things to come</h1>
+    <h3>made by @Toadking</h3>
+    <h2><a href="https://womginx.riolubruh.repl.co/main/https://tsone.kapsi.fi/em-fceux/">FCEUX (NES)</a></h2>
+    <h2><a href="!RetroArch - Snes9x Next.html">Snes9x Next</a></h2>
+    <h2><a href="!RetroArch - Genesis Plus GX.html">Genesis Plus GX</a></h2>
+    <h2><a href="SkyEmu.html">SkyEmu (GameBoy/Color/Advance)</a></h2>
+    <h2><a href="!RetroArch - Handy (Lynx emulator).html">Handy (Lynx)</a></h2>
+    <h2><a href="!RetroArch - Tyrquake.html">Tyrquake</a></h2>
+    <h2><a href="!RetroArch - FinalBurn Alpha.html">FinalBurn Alpha</a> <span style="color: red">WARNING: Huge file, might hang browser for a minute or two</span></h2>
+    <h2><a href="https://toadking.com/retroarch/mupen64plus.html">Mupen64Plus (N64)</a> <span style="color: red">WARNING: Is very buggy</span></h2>
+    <h2><a href="https://ds.44670.org">DeSmuME (Nintendo DS)</a></h2>
+    <p>The result of three and a half days of porting (plus a couple weeks of adding features), RetroArch is now on your web browser! &quot;How useless!&quot; you say? Well probably, but it was a fun thing to do.</p>
+    <p>Most of the general features of RetroArch are here with some exceptions. V-sync is based off of your browser, so it's not perfect. Sound can also a little staticy. Try increasing the latency a bit to improve it. V-sync can be glitchy because it's not ran on the monitor's actual v-sync but the browser draw event. (Firefox team is working on syncing draws to V-sync, which should help this a ton.) In the meantime, you should keep v-sync off. Also, file saving is not in yet since I don't want to write a bunch of Javascript right now. This also means savestates and stuff don't get saved when you leave the page.</p>
+    <p>Firefox 22 or later gets the best results with asm.js, especially Nightly versions. Both Chrome and Firefox 25 and later will have audio support, but earlier versions of Firefox will not. You can also get better performance on Windows if you enable native GL (in about:config, set &quot;webgl.prefer-native-gl&quot; to true) but this might not work on all drivers *coughamdcough*. Google Chrome is not as fast, but you may get better audio on it. Even though Internet Explorer 11 has WebGL support, it is not complete and RetroArch will not work with it. Other browsers may or may not work, but don't bet on them.</p>
+    <p>Coming soon: Mupen64 Javascript Dynarec? <small>(don't count on it)</small></p>
+  </body>
+</html>
