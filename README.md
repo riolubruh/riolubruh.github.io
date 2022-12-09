@@ -7,7 +7,7 @@ GH Pages version has all the static files at
 
 https://riolubruh.github.io/stuff/
 
-Regular versions below:
+Other versions below:
 
 https://riolubruh.cf
 
