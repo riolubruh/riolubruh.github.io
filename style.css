@@ -1,7 +1,7 @@
 /*:body:before {
-  content: url(bg copy.jpg)
+  content: url(bg serious.jpg)
     // partial fallback
-  background-image: url(bg copy.jpg);
+  background-image: url(bg serious.jpg);
   visibility: hidden;
   position: absolute;
   left: -999em;
