@@ -6,10 +6,12 @@ Now being partially hosted here on GitHub (only static files)
 
 GH Pages version has all the static files at
 
-https://riolubruh.github.io/stuff/
+https://riolubruh.github.io
 
 Other versions below:
 
 https://riolubruh.cf
 
 https://stuff.riolubruh.repl.co
+
+https://stuff.riolubro123.workers.dev
