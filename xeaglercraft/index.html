@@ -12,26 +12,33 @@
 		<meta property="og:description" content="Play minecraft 1.8 in your browser" />
 		<meta property="og:image" content="favicon.png" />
 		<link type="image/png" rel="shortcut icon" href="favicon.png" />
+		<script type="text/javascript" src="eaglercraft_opts.js"></script>
 		<script type="text/javascript" src="classes.js"></script>
 		<script type="text/javascript" src="fix-webm-duration.js"></script>
 		<script type="text/javascript">
+			"use strict";
 			window.addEventListener("load", () => {
 				if(document.location.href.startsWith("file:")) {
 					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
 				}else {
-					window.eaglercraftXOpts = {
-						container: "game_frame",
-						assetsURI: "assets.epk",
-						localesURI: "lang/",
-						servers: [
-							{ addr: "wss://mc.asspixel.net", name: "AssPixel" },
-							{ addr: "wss://sus.shhnowisnottheti.me", name: "Ayunboom" },
-							{ addr: "wss://aeon-network.net/1.8", name: "Aeon" },
-							{ addr: "wss://beta.vanillacraftsmp.org/", name: "VanillaCraft" },
-							{ addr: "wss://mc.sealcentral.co", name: "SealCraft" },
-							{ addr: "wss://g.deev.is/eaglerx-reference", name: "Reference Implementation" }
-						]
-					};
+					var opts = window.eaglercraftXOpts;
+					
+					if(typeof opts === "function") window.eaglercraftXOpts = opts = opts();
+					if(typeof opts === "undefined") window.eaglercraftXOpts = opts = {};
+					
+					if(!opts.container) opts.container = "game_frame";
+					if(!opts.assetsURI) opts.assetsURI = "assets.epk";
+					if(!opts.localesURI) opts.localesURI = "lang/";
+					
+					if(!opts.joinServer)  {
+						var q = window.location.search;
+						if(typeof q === "string" && q.startsWith("?")) {
+							q = new URLSearchParams(q);
+							var s = q.get("server");
+							if(s) opts.joinServer = s;
+						}
+					}
+					
 					main();
 				}
 			});
