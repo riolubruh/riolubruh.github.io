@@ -1,4 +1,5 @@
 #shibePhoto {
-	max-height: 546px;
-	min-height: 546px;
+	max-height: 90vh;
+	min-height: 80vh;
+	max-width: 90vw;
 }
