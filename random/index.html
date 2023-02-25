@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random Shibe, Cats, Birbs</title>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+    <link rel="prefetch" as="image" href="/bg serious.jpg">
+    <link href="./spaghetti.css" rel="stylesheet" type="text/css" />
+    <link rel="prefetch" as="document" href="/random/random_shibe.html">
+    <link rel="prefetch" as="document" href="/random/random_cats.html">
+    <link rel="prefetch" as="document" href="/index.html">
+    <link rel="prefetch" as="document" href="/random/random_birds.html">
+    <style>
+    body {
+      width: auto;
+      background-position: center center;
+      background-size: 100vw !important;
+      background-repeat: no-repeat !important;
+      background-color: black !important;
+    }
+      
+    .txt {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      padding-top: 5%;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /*a {
+      font-family: Arial, Helvetica, sans-serif;
+      size: 30px;
+      font-weight: bold;
+      animation: colortext 2s infinite;
+    }*/
+  </style>
+    <script type="text/javascript">
+      let corsAnywhere = 'https://cors-anywhere.riolubruh.repl.co/';
+		  let apiUrl = 'tidy-living-complaint.herokuapp.com:443/lesson/shibe.online/api/shibes?count=1';
+
+		fetch(corsAnywhere + apiUrl)
+		.then(response => {
+		  return response.json();
+		}).then(data => {
+		  handleCheckSuccess(data);
+		}).catch(err => {
+		  handleError(err);
+		});
+
+      function handleCheckSuccess(response) {
+		//console.log(response[0]);
+		var imageUrl = response[0];
+		imageUrl = "https://tidy-living-complaint.herokuapp.com/lesson/" + imageUrl;
+      console.log(imageUrl);
+      if(imageUrl != undefined){
+        document.body.style.background += ("url(\'" + imageUrl + "\')")
+      }
+    }
+      
+    </script>
+  </head>
+    <body>
+        <div class="rainbow_text2">
+          <div class="rainbow_button">
+      <div class="back">
+    <a href="/misc.html">Back</a>  
+      </div>
+      <div class="txt">
+  <a href='./random_shibes.html'>Random Shibes</a>
+  <br>
+  <a href='./random_cats.html'>Random Cats</a>
+  <br>
+  <a href='./random_birds.html'>Random Birds</a>
+  <br><br>
+      </div>
+      </div>
+        </div>
+  </body>
+<noscript>You will need JavaScript for this to work!</noscript>

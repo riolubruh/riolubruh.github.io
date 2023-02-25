@@ -1,0 +1,38 @@
+ a {
+            background: linear-gradient(to right, blue, red, green, purple, white, yellow, purple, blue, white, blue, red, green, purple, white, yellow, purple, blue, white);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow_animation 13s ease-in-out infinite;
+            background-size: 1200% 100%;
+            font-size: 20px;
+            text-decoration: underline !important;
+            text-decoration-color: #2a5fcb !important;
+        }
+        
+        
+
+        @keyframes rainbow_animation {
+
+            0%,
+            100% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 100% 0;
+            }
+        }
+
+.white {
+	color: white;
+}
+.green {
+	color: green;
+}
+.blue {
+	color: blue;
+}
+.red {
+	color: red;
+}
