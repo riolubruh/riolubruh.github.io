@@ -38,7 +38,7 @@
   </style>
     <script type="text/javascript">
       let corsAnywhere = 'https://cors-anywhere.riolubruh.repl.co/';
-		  let apiUrl = 'tidy-living-complaint.herokuapp.com:443/lesson/shibe.online/api/shibes?count=1';
+		  let apiUrl = 'shibe.online/api/shibes?count=1';
 
 		fetch(corsAnywhere + apiUrl)
 		.then(response => {
@@ -52,8 +52,6 @@
       function handleCheckSuccess(response) {
 		//console.log(response[0]);
 		var imageUrl = response[0];
-		imageUrl = "https://tidy-living-complaint.herokuapp.com/lesson/" + imageUrl;
-      console.log(imageUrl);
       if(imageUrl != undefined){
         document.body.style.background += ("url(\'" + imageUrl + "\')")
       }

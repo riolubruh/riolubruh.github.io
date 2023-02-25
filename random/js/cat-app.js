@@ -11,7 +11,7 @@ $(document).ready(function() {
 		shibeContainer.html(loadingText);
 
 		var corsAnywhere = 'https://cors-anywhere.riolubruh.repl.co/';
-		var apiUrl = 'tidy-living-complaint.herokuapp.com:443/lesson/shibe.online/api/cats?count=1';
+		var apiUrl = 'shibe.online/api/cats?count=1';
 
 		fetch(corsAnywhere + apiUrl)
 		.then(response => {
@@ -24,9 +24,7 @@ $(document).ready(function() {
 	}
 
 	function handleCheckSuccess(response) {
-		//console.log(response[0]);
 		var imageUrl = response[0];
-		imageUrl = "https://tidy-living-complaint.herokuapp.com/lesson/" + imageUrl;
 		var shibeImg = '<img id="shibePhoto" src="' + imageUrl + '" class="img-fluid">';
 		shibeContainer.html(shibeImg);
 	}
