@@ -1,8 +1,9 @@
-download/ -linguist-detectable
-download/ linguist-generated
+download/** -linguist-detectable
+download/** linguist-generated
 retroarch/*.js linguist-vendored
 retroarch/*.wasm linguist-vendored
 flash/ruffle.js linguist-vendored
+flash/*.swf -linguist-detectable
 flash/ruffle.js.map linguist-vendored
 fuFLCI6LcU3kvGrs linguist-language=HTML
-g/ linguist-generated
+g/** linguist-generated
