@@ -64,9 +64,3 @@ node_modules/
 
 # dotenv environment variables file
 .env
-
-download/
-retroarch/
-flash/ruffle.js
-flash/ruffle.js.map
-#Stuff I didn't make
