@@ -7,5 +7,6 @@ flash/*.swf -linguist-detectable
 flash/ruffle.js.map linguist-vendored
 fuFLCI6LcU3kvGrs linguist-language=HTML
 g/** linguist-generated
+g/btd4-haxe/** -linguist-detectable
 sm64ex/sm64.us.f3dex2e.js linguist-generated
 sm64ex/sm64.us.f3dex2e.wasm linguist-generated
