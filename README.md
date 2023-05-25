@@ -1,8 +1,13 @@
 # stuff
 my main website
 
-A version of my personal website that I've been making over the last couple years cause I was bored at school.
-Now being partially hosted here on GitHub (only static files)
+My personal website that I've been making over the last couple years cause I was bored at school.
+
+Now being hosted here on GitHub.
+
+Contains several games, links to proxies, and more.
+
+There's a few hidden easter eggs and shit to look for btw.
 
 URL:
 
