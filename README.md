@@ -15,7 +15,7 @@ https://riolubruh.github.io
 
 Alternate URLs below:
 
-https://riolubruh.cf
+<!--https://riolubruh.cf-->
 
 https://stuff.riolubruh.repl.co
 
