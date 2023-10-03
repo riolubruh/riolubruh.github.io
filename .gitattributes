@@ -10,3 +10,6 @@ g/** linguist-generated
 g/btd4-haxe/** -linguist-detectable
 sm64ex/sm64.us.f3dex2e.js linguist-generated
 sm64ex/sm64.us.f3dex2e.wasm linguist-generated
+g/fnfvshaggyk/** -linguist-detectable
+g/fnfvshaggyk/** linguist-vendored
+g/fnfvshaggyk/** linguist-generated
