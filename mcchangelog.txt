@@ -1,5 +1,8 @@
 Minecraft 1.5.2 Portable 1.5.2 Extreme Conditions Edition Changelog
 
+10/3/2023
+Replaced symlinks with copy commands because symlinks might require permissions on some devices
+
 11/21/2021
 Made it so that there is only one AppData folder instead of two
 -Used symlinking to switch between the vanilla and modded minecraft jars instead of using a different AppData folder
