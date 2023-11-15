@@ -13,3 +13,6 @@ sm64ex/sm64.us.f3dex2e.wasm linguist-generated
 g/fnfvshaggyk/** -linguist-detectable
 g/fnfvshaggyk/** linguist-vendored
 g/fnfvshaggyk/** linguist-generated
+webretro/** linguist-vendored
+webretro/** linguist-generated
+webretro/** -linguist-detectable
