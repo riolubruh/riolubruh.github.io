@@ -1,21 +1,21 @@
 # stuff
-my main website
+my old website
 
-My personal website that I've been making over the last couple years cause I was bored at school.
+My old personal website I made because I was bored during high school.
 
-Now being hosted here on GitHub.
+Updates to this website will be extremely infrequent, as I am no longer in high school and don't care much about this project anymore.
+
+A more professional/good website will eventually replace this one.
 
 Contains several games, links to proxies, and more.
 
-There's a few hidden easter eggs and shit to look for btw.
+There's a few hidden easter eggs and stuff to look for btw.
 
 URL:
 
 https://riolubruh.github.io
 
 Alternate URLs below:
-
-<!--https://riolubruh.cf-->
 
 https://stuff.riolubruh.repl.co
 
