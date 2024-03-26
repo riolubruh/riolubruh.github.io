@@ -17,8 +17,6 @@ https://riolubruh.github.io
 
 Alternate URLs below:
 
-https://stuff.riolubruh.repl.co
-
 https://stuff.riolubro123.workers.dev
 
 https://stuff.riolubruh.workers.dev/
