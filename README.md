@@ -3,7 +3,7 @@ my old website
 
 My old personal website I made because I was bored during high school.
 
-Updates to this website will be extremely infrequent, as I am no longer in high school and don't care much about this project anymore.
+Updates to this website will be extremely infrequent, as I am no longer in high school (and haven't been for a long time) and don't care much about this project anymore.
 
 A more professional/good website will eventually replace this one.
 
