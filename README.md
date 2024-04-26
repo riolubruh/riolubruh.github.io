@@ -1,15 +1,8 @@
-# stuff
-my old website
+# new website
 
-My old personal website I made because I was bored during high school.
+new more professional looking website
 
-Updates to this website will be extremely infrequent, as I am no longer in high school (and haven't been for a long time) and don't care much about this project anymore.
-
-A more professional/good website will eventually replace this one.
-
-Contains several games, links to proxies, and more.
-
-There's a few hidden easter eggs and stuff to look for btw.
+old website is still available at https://riolubruh.github.io/stuff.html
 
 URL:
 
