@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riolubruh's Cute Animals</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./script.js" defer></script>
+	<noscript>
+        <!--If the user has JS disabled, the image wrapper won't work,
+            so don't show the zoom-in cursor since clicking won't do anything-->
+        <style>
+            .clickableImage:hover {
+                cursor: default !important;
+            }
+        </style>
+    </noscript>
+</head>
+<body>
+    <div onclick="closeImageWrapper()" class="imageWrapper" id="imageWrapper">
+        <nav class="imageWrapperNav">
+            <ul>
+                <li><a onclick="closeImageWrapper()">x</a></li>
+                <!--If you add more buttons here, they will line up vertically on the right
+                side of the screen. In their click event handlers you would have to run
+                event.stopImmediatePropagation() or event.stopPropagation() to prevent the image wrapper
+                from closing if you wanted to give those buttons some special functionality.-->
+            </ul>
+        </nav>
+        <img id="imageWrapperImage" alt="Image in Wrapper" src="./img/empty.jpg">
+    </div>
+    <header>
+        <img id="headerimg" src="./img/headerimg.jpg" alt="Header Image">
+    </header>
+    <nav class="horizontalNav">
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./blogs">Blogs</a></li>
+            <li><a href="./cute_animals.html">Cute Animals</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./gaming.html">Gaming</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <table class="recentlyUpdated">
+        <tr>
+            <th>Recently Updated</th>
+        </tr>
+        <tr class="color1">
+            <td><a href="./">Home page updated!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./gaming.html">Gaming page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./contact.html">Contact page created!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./projects.html">Projects page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./cute_animals.html">Cute animals page created!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./blogs">Blog landing page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./">Home page created!</a></td>
+        </tr>
+    </table>
+
+
+    <div class="cute_animals">
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/IMG_2453.jpg" alt="Cat Picture">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/catpicture1.jpg" alt="Cat Picture">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/pfp_2024.jpg" alt="Profile Picture 2024">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/IMG_2330.JPG" alt="Cat Picture">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/IMG_2198.JPG" alt="Cat Picture">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/IMG_2072.JPG" alt="Cat Picture">
+        </figure>
+        <figure>
+            <img class="clickableImage" onclick="openImageWrapper(this.src)" 
+            src="./img/DRDQ1336.JPG" alt="Cat Picture">
+        </figure>
+    </div>
+</body>
+</html>

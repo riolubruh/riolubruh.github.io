@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riolubruh's Gaming Page</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div onclick="closeImageWrapper()" class="imageWrapper" id="imageWrapper">
+        <nav class="imageWrapperNav">
+            <ul>
+                <li><a onclick="closeImageWrapper()">x</a></li>
+                <!--If you add more buttons here, they will line up vertically on the right
+                side of the screen. In their click event handlers you would have to run
+                event.stopImmediatePropagation() or event.stopPropagation() to prevent the image wrapper
+                from closing if you wanted to give those buttons some special functionality.-->
+            </ul>
+        </nav>
+        <img id="imageWrapperImage" alt="Image in Wrapper" src="./img/empty.jpg">
+    </div>
+    <header>
+        <img id="headerimg" src="./img/headerimg.jpg" alt="Header Image">
+    </header>
+    <nav class="horizontalNav">
+        <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="./blogs">Blogs</a></li>
+            <li><a href="./cute_animals.html">Cute Animals</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./gaming.html">Gaming</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <table class="recentlyUpdated">
+        <tr>
+            <th>Recently Updated</th>
+        </tr>
+        <tr class="color1">
+            <td><a href="./">Home page updated!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./gaming.html">Gaming page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./contact.html">Contact page created!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./projects.html">Projects page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./cute_animals.html">Cute animals page created!</a></td>
+        </tr>
+        <tr class="color2">
+            <td><a href="./blogs">Blog landing page created!</a></td>
+        </tr>
+        <tr class="color1">
+            <td><a href="./">Home page created!</a></td>
+        </tr>
+    </table>
+
+    <article>
+        <div class="darkContainer">
+            <h1><u>Gaming Stuff</u></h1>
+            <p>A place where I can freely dump screenshots and videos from video games to share with you.</p>
+            <details class="gamingDropdown">
+                <summary><h2>&nbsp;Minecraft "Better Than Adventure!" Mod Screenshots</h2></summary>
+                <b>Note: all screenshots are from Singleplayer on Survival Mode.</b>
+                <figure class="screenshots">
+                        <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-02-19/22.06.51.png" alt="MC BTA screenshot">
+                        <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-02-19/22.06.59.png" alt="MC BTA screenshot">
+                        <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-02-19/22.07.07.png" alt="MC BTA screenshot">
+                        <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-02-19/22.07.16.png" alt="MC BTA Screenshot">
+                        <figcaption>Quadruple Cap Block Build (32x32x32). Completed 02/19/2024.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-28/15.15.05.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-28/15.14.17.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-28/15.13.58.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-28/15.13.48.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-28/15.13.30.png" alt="MC BTA screenshot">
+                    <figcaption>Technoblade Statue. Completed 01/28/2024.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.26.24.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.21.21.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.20.57.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.20.47.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.20.39.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-25/19.20.27.png" alt="MC BTA screenshot">
+                    <figcaption>Tuxedo Steve Statue. Completed 01/25/2024.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-23/19.15.56.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-23/19.15.54.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-23/16.43.06.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-23/16.23.45.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-23/16.21.10.png" alt="MC BTA screenshot">
+                    <figcaption>Possum and Super Mario World Pixel Art. Completed 01/23/2024.
+                        <br>Possum pixel art created by wetpossumversion2.0 on Discord.
+                    </figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.33.33.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.32.54.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.32.26.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.31.54.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.31.48.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.31.42.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.31.36.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-21/19.31.22.png" alt="MC BTA screenshot">
+                    <figcaption>Ocelot Statue. Completed 01/21/2024.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/19.17.19.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.48.56.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.48.22.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.41.42.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.41.13.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.41.06.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.40.47.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.40.16.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-20/18.38.11.png" alt="MC BTA screenshot">
+                    <figcaption>Brick Bridges and Watchtower. Completed 01/20/2024.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/23.31.57.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/23.23.48.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/23.15.58.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/23.11.35.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/23.11.28.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/22.51.08.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/22.47.49.png" alt="MC BTA screenshot">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mc_bta_screenshots/2024-01-19/22.47.13.png" alt="MC BTA screenshot">
+                    <figcaption>Cozy Kitchen & Cake. Completed 01/19/2024.</figcaption>
+                </figure>
+                <hr>
+            </details>
+
+            <details class="gamingDropdown">
+                <summary><h2>&nbsp;Mario Kart Wii</h2></summary>
+                <figure class="screenshots">
+                    <iframe style="width: 100%; height: 50vh; border: none;" width="1280" height="720" src="https://www.youtube-nocookie.com/embed/4JIMyEccobo?si=zRMV-SJKJQGXMi07" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Demonstration of the Stupid Hard CPU Mod for Mario Kart Wii I made.</figcaption>
+                </figure>
+                <hr>
+                <figure class="screenshots">
+                    <img class="clickableImage" onclick="openImageWrapper(this.src)" src="./img/mkwii/Dolphin_wD3kbvoYct.png" alt="Mario Kart Wii Screenshot">
+                    
+                    <figcaption>Miscellaneous Screenshots</figcaption>
+                </figure>
+                <hr>
+            </details>
+        </div>
+    </article>
+   
+</body>
+</html>
