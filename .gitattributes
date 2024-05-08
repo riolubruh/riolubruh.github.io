@@ -1,5 +1,6 @@
 download/** -linguist-detectable
 download/** linguist-generated
+download/** linguist-vendored
 retroarch/*.js linguist-vendored
 retroarch/*.wasm linguist-vendored
 flash/ruffle.js linguist-vendored
