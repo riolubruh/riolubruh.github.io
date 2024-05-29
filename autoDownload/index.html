@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloading</title>
+</head>
+<body>
+    <a href="#" id="download" download>Downloading...</a>
+    <script type="text/javascript">
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        let fileUrl = urlParams.get("file");
+
+        async function download(fileUrl, fileName){
+            const anchor = document.getElementById("download");
+            const file = await fetch(fileUrl);
+            const fileBlob = await file.blob();
+            anchor.download = String(fileName);
+            anchor.href = URL.createObjectURL(fileBlob);
+            anchor.focus();
+            anchor.click();
+        }
+        if(fileUrl != undefined){
+            var fileName = decodeURIComponent(fileUrl).split('/').pop();
+            download(decodeURIComponent(fileUrl), fileName);
+        }
+
+        window.close();
+    </script>
+</body>
+</html>
