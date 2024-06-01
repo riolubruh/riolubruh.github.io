@@ -6,7 +6,7 @@
     <title>Downloading</title>
 </head>
 <body>
-    <a href="#" id="download" download>Downloading...</a>
+    <a href="#" id="download" download>Downloading file. Once complete, you may close this window.</a>
     <script type="text/javascript">
         
         const urlParams = new URLSearchParams(window.location.search);
@@ -21,9 +21,11 @@
             anchor.focus();
             anchor.click();
         }
+		
         if(fileUrl != undefined){
             var fileName = decodeURIComponent(fileUrl).split('/').pop();
             download(decodeURIComponent(fileUrl), fileName);
+			window.close();
         }
 
         window.close();
