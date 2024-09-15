@@ -6,7 +6,7 @@ var frames = new Array(4);
 
 document.addEventListener("DOMContentLoaded", function() {
   document.body.parentNode.style.height = "100%";
-  document.body.style.cssText = bodyCss;
+  document.getElementById("container").style.cssText = bodyCss;
   var i = frames.length;
   while (i--) {
     frames[i] = new Image();
@@ -39,25 +39,24 @@ function tryPlayback() {
     });
 }
 function showPlayButton() {
-  document.body.innerHTML = playButtonHtml + originalhtml;
-  document.body.style.backgroundImage = "url(" + frames[0].src + ")";
+  document.getElementById("container").innerHTML += playButtonHtml;
+  document.getElementById("container").style.backgroundImage = "url(" + frames[0].src + ")";
   window.addEventListener("click", tryPlayback, true);
 }
 function startPlayback() {
-  //window.addEventListener("click", muteHandler, true);
-  document.body.innerHTML = originalhtml;
-  Init();
+  window.addEventListener("click", muteHandler, true);
+  document.getElementById("playButton").remove();
   audio.play();
-  time = 0;
   var frame = 0;
   setInterval(function() {
-    document.body.style.backgroundImage = "url(" + frames[frame].src + ")";
+    document.getElementById("container").style.backgroundImage = "url(" + frames[frame].src + ")";
     frame++;
     if (frames[frame] === undefined) frame = 0;
   }, 100);
+  Init();
 }
 function muteHandler() {
-  audio.muted = !audio.muted;
+  //audio.muted = !audio.muted;
 }
 function canPlay(audio) {
   var playHandler, timeout;
@@ -81,12 +80,12 @@ function canPlay(audio) {
 
 (function() {
   bodyCss =
-    "box-sizing:border-box;width:99%;height:100%;background:#000 no-repeat 50% 50%/contain; padding-top: 0; margin-top: 15px"
-})();
+    "box-sizing:border-box;width:100%;height:100%;margin:0;background:#000 no-repeat 50% 50%/contain;";
+})(); // bodyCss
 (function() {
   playButtonHtml =
-    '<div style="' +
-    "position:absolute;display:table;width:99%;height:100%;" +
+    '<div id="playButton" style="' +
+    "position:absolute;display:table;width:100%;height:100%;" +
     "background:no-repeat 50% 50%/contain;" +
     "cursor:pointer;font:4rem arial;text-shadow: 0 0 .5rem #fff;" +
     '">' +

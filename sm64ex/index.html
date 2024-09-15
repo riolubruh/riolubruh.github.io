@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-    <meta property="og:title" content="This is why WebASM is so cool." />
-    <meta property="og:site_name" content="I should probably not leave this blank.">
-    <meta property="og:description" content="It's-a me Mario!" />
-    <meta property="og:image" content="https://riolubruh.github.io/img/mariodefaultdance.gif" />
+  <meta property="og:site_name" content="This is why WebASM is so cool!">
+  <meta property="og:title" content="Super Mario 64 EX WebASM">
+  <meta property="og:description" content="It's-a me Mario!">
+  <meta property="og:image" content="https://riolubruh.github.io/img/mariodefaultdance.gif">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link rel="shortcut icon" type="image/gif" href="/favicon.ico"/>
+  <link rel="shortcut icon" type="image/gif" href="/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sm64ex Emscripten</title>
-   <style>
-      body, html{
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        min-height: 100vh;
-        background-color: #111;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-        image-rendering: pixelated;
-        scrollbar-width: none;
-      }
-      ::-webkit-scrollbar {
-        display: none;
-      }
-      #container {
-        width: 100vw;
-        height: 100vh !important;
-        max-height: 100vh !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      canvas {
-        width: 100vw;
-        height: 100vh !important;
-        display: flex !important;
-      }
-      #controls {
-        margin-left: 1em;
-        display: flex;
-        align-items: center;
-      }
-      #controller, #expl {
-        padding-left: 4em;
-      }
-    </style>
-  </head>
+  <title>sm64ex Emscripten</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      min-height: 100vh;
+      background-color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      image-rendering: pixelated;
+      scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    #container {
+      width: 100vw;
+      height: 100vh !important;
+      max-height: 100vh !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      width: 100vw;
+      height: 100vh !important;
+      display: flex !important;
+    }
+
+    #controls {
+      margin-left: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    #controller,
+    #expl {
+      padding-left: 4em;
+    }
+  </style>
+</head>
+
 <body>
-    <div id="controls">
-      <div id="keyboard">
-        <h2>Keyboard Controls</h2>
-        <ul>
-          <li>Movement: Arrow Keys</li>
-          <li>A: X</li>
-          <li>B: C</li>
-          <li>R: R</li>
-          <li>Z: Z</li>
-          <li>Start: Enter</li>
-          <li>C-stick: WASD</li>
-        </ul>
-      </div>
-      <div id="controller">
-        <h2>You can use a controller!</h2>
-        <h2>You can save!</h2>
-        <h2>Press page down to hide these instructions.</h2>
-        <h2>Press page up to see them again.</h2>
-      </div>
+  <div id="controls">
+    <div id="keyboard">
+      <h2>Keyboard Controls</h2>
+      <ul>
+        <li>Movement: Arrow Keys</li>
+        <li>A: X</li>
+        <li>B: C</li>
+        <li>R: R</li>
+        <li>Z: Z</li>
+        <li>Start: Enter</li>
+        <li>C-stick: WASD</li>
+      </ul>
     </div>
+    <div id="controller">
+      <h2>You can use a controller!</h2>
+      <h2>You can save!</h2>
+      <h2>Press page down to hide these instructions.</h2>
+      <h2>Press page up to see them again.</h2>
+    </div>
+  </div>
   <div id="expl">
     There is a bug with frame times! Switch to another tab and come back after a few seconds to fix it!
   </div>
-    <div id="container">
-      <canvas class="emscripten" id="canvas"></canvas>
-    </div>
+  <div id="container">
+    <canvas class="emscripten" id="canvas"></canvas>
+  </div>
+
   <body>
-  <script type="text/javascript">
-  (function(s){var w,f={},o=window,l=console,m=Math,z='postMessage',p=0,r='hasOwnProperty',y=[].slice,x='fail',v=o.Worker;function d(){do{p=0x7FFFFFFF>p?p+1:0}while(f[r](p));return p}if(!/MSIE 10/i.test(navigator.userAgent)){try{s=o.URL.createObjectURL(new Blob(["var f={},p=postMessage,r='hasOwnProperty';onmessage=function(e){var d=e.data,i=d.i,t=d[r]('t')?d.t:0;switch(d.n){case'a':f[i]=setInterval(function(){p(i)},t);break;case'b':if(f[r](i)){clearInterval(f[i]);delete f[i]}break;case'c':f[i]=setTimeout(function(){p(i);if(f[r](i))delete f[i]},t);break;case'd':if(f[r](i)){clearTimeout(f[i]);delete f[i]}break}}"]))}catch(e){}}if(typeof(v)!=='undefined'){try{w=new v(s);o.setInterval=function(c,t){var i=d();f[i]={c:c,p:y.call(arguments,2)};w[z]({n:'a',i:i,t:t});return i};o.clearInterval=function(i){if(f[r](i))delete f[i],w[z]({n:'b',i:i})};o.setTimeout=function(c,t){var i=d();f[i]={c:c,p:y.call(arguments,2),t:!0};w[z]({n:'c',i:i,t:t});return i};o.clearTimeout=function(i){if(f[r](i))delete f[i],w[z]({n:'d',i:i})};w.onmessage=function(e){var i=e.data,c,n;if(f[r](i)){n=f[i];c=n.c;if(n[r]('t'))delete f[i]}if(typeof(c)=='string')try{c=new Function(c)}catch(k){}if(typeof(c)=='function')c.apply(o,n.p)}}catch(e){l.log(x)}}else l.log(x)})('HackTimerWorker.min.js');
-  </script>
-  <script type="text/javascript">
-  var f={},p=postMessage,r='hasOwnProperty';onmessage=function(e){var d=e.data,i=d.i,t=d[r]('t')?d.t:0;switch(d.n){case'a':f[i]=setInterval(function(){p(i)},t);break;case'b':if(f[r](i)){clearInterval(f[i]);delete f[i]}break;case'c':f[i]=setTimeout(function(){p(i);if(f[r](i))delete f[i]},t);break;case'd':if(f[r](i)){clearTimeout(f[i]);delete f[i]}break}}
-  </script>  
-	<script type="text/javascript">
+    <script type="text/javascript">
+      (function (s) { var w, f = {}, o = window, l = console, m = Math, z = 'postMessage', p = 0, r = 'hasOwnProperty', y = [].slice, x = 'fail', v = o.Worker; function d() { do { p = 0x7FFFFFFF > p ? p + 1 : 0 } while (f[r](p)); return p } if (!/MSIE 10/i.test(navigator.userAgent)) { try { s = o.URL.createObjectURL(new Blob(["var f={},p=postMessage,r='hasOwnProperty';onmessage=function(e){var d=e.data,i=d.i,t=d[r]('t')?d.t:0;switch(d.n){case'a':f[i]=setInterval(function(){p(i)},t);break;case'b':if(f[r](i)){clearInterval(f[i]);delete f[i]}break;case'c':f[i]=setTimeout(function(){p(i);if(f[r](i))delete f[i]},t);break;case'd':if(f[r](i)){clearTimeout(f[i]);delete f[i]}break}}"])) } catch (e) { } } if (typeof (v) !== 'undefined') { try { w = new v(s); o.setInterval = function (c, t) { var i = d(); f[i] = { c: c, p: y.call(arguments, 2) }; w[z]({ n: 'a', i: i, t: t }); return i }; o.clearInterval = function (i) { if (f[r](i)) delete f[i], w[z]({ n: 'b', i: i }) }; o.setTimeout = function (c, t) { var i = d(); f[i] = { c: c, p: y.call(arguments, 2), t: !0 }; w[z]({ n: 'c', i: i, t: t }); return i }; o.clearTimeout = function (i) { if (f[r](i)) delete f[i], w[z]({ n: 'd', i: i }) }; w.onmessage = function (e) { var i = e.data, c, n; if (f[r](i)) { n = f[i]; c = n.c; if (n[r]('t')) delete f[i] } if (typeof (c) == 'string') try { c = new Function(c) } catch (k) { } if (typeof (c) == 'function') c.apply(o, n.p) } } catch (e) { l.log(x) } } else l.log(x) })('HackTimerWorker.min.js');
+    </script>
+    <script type="text/javascript">
+      var f = {}, p = postMessage, r = 'hasOwnProperty'; onmessage = function (e) { var d = e.data, i = d.i, t = d[r]('t') ? d.t : 0; switch (d.n) { case 'a': f[i] = setInterval(function () { p(i) }, t); break; case 'b': if (f[r](i)) { clearInterval(f[i]); delete f[i] } break; case 'c': f[i] = setTimeout(function () { p(i); if (f[r](i)) delete f[i] }, t); break; case 'd': if (f[r](i)) { clearTimeout(f[i]); delete f[i] } break } }
+    </script>
+    <script type="text/javascript">
       var Module = {
         preRun: [],
         postRun: [],
-        print: (function() {
-          return function(text) {
+        print: (function () {
+          return function (text) {
             if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
             console.log(text);
           };
         })(),
-        printErr: function(text) {
+        printErr: function (text) {
           if (arguments.length > 1)
             text = Array.prototype.slice.call(arguments).join(' ');
           console.error(text);
         },
-        canvas: (function() {
+        canvas: (function () {
           var canvas = document.getElementById('canvas');
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
-          canvas.addEventListener("webglcontextlost", function(e) {
+          canvas.addEventListener("webglcontextlost", function (e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
           }, false);
           return canvas;
         })(),
-        setStatus: function(text) {
+        setStatus: function (text) {
         }
       };
     </script>
     <script type="text/javascript" src="sm64.us.f3dex2e.js"></script>
   </body>
+
 </html>
