@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloading</title>
+    <title>Auto Download</title>
 </head>
 <body>
-    <a href="#" id="download" download>Downloading file. Once complete, you may close this window.</a>
+    <a href="#" id="download" download>Downloading file...</a>
     <script type="text/javascript">
         
         const urlParams = new URLSearchParams(window.location.search);
@@ -16,6 +16,7 @@
             const anchor = document.getElementById("download");
             const file = await fetch(fileUrl);
             const fileBlob = await file.blob();
+			anchor.innerHTML = "Download complete. Click here if the save dialog does not appear automatically."
             anchor.download = String(fileName);
             anchor.href = URL.createObjectURL(fileBlob);
             anchor.focus();
