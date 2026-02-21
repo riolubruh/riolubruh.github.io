@@ -18,17 +18,87 @@ body {
     color: white;
 }
 
-header {
+@keyframes colorFilter {
+    0% {
+        filter: hue-rotate(-720deg) contrast(1.1);
+    }
+    50% {
+        filter: hue-rotate(720deg) contrast(0.9);
+    }
+    100% {
+        filter: hue-rotate(-720deg) contrast(1.1);
+    }
+}
+header{
     height: 5%;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
-    border: 4px solid black;
+    background-image: url("./img/checkerboard.png");
+    background-size: 4.61vh;
+    min-height: 150px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    filter: none;
+    overflow: hidden;
+    animation-name: colorFilter;
+    animation-duration: 75s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    filter: brightness(-90%);
+    animation-fill-mode:forwards;
 }
+
 
 header img#headerimg {
     max-height: 5%;
+    min-height: 150px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    filter: none;
     overflow: hidden;
+}
+
+@keyframes scrollertext {
+    0% {
+        left: calc(100vw + 75cqw);
+    }
+    100% {
+        left: calc(-100vw - 75cqw);
+    }
+}
+
+@font-face {
+    font-family: "MinecraftBold";
+    src: url(MinecraftBold-nMK1.otf);
+}
+
+div.headertextcontainer{
+    width:fit-content;
+    display:inline;
+}
+
+.headertext{
+    position:relative;
+    display:inline;
+    font-size:36pt;
+    filter:contrast(1.1);
+    top: 44px;
+    color:blue;
+    height:fit-content;
+    width: fit-content;
+    backdrop-filter: hue-rotate(180deg) brightness(0.9);
+    filter: brightness(1.2);
+    animation-name: scrollertext;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 0ms;
+    font-family: MinecraftBold, Consolas, monospace;
+    font-weight: bolder;
+    white-space: nowrap;
+    user-select: none;
 }
 
 nav.horizontalNav ul {
@@ -228,6 +298,7 @@ div.imageWrapper {
     display: flex;
     opacity: 0%;
     transition: opacity 0.3s;
+    z-index: 99;
 }
 
 div.imageWrapper:hover{
